@@ -66,8 +66,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: src/${{ matrix.apps }}
-          file: src/${{ matrix.apps }}/Dockerfile
+          context: lab-azure/aks-store-demo/src/${{ matrix.apps }}
+          file: lab-azure/aks-store-demo/src/${{ matrix.apps }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           build-args: |
             APP_VERSION=${{ steps.set-variables.outputs.VERSION }}
