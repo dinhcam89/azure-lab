@@ -33,7 +33,7 @@ jobs:
       - name: Set environment variables
         id: set-variables
         run: |
-          echo "REPOSITORY=ghcr.io/$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
+          echo "REPOSITORY=camhdacr.azurecr.io" >> "$GITHUB_OUTPUT"
           echo "IMAGE=${{ matrix.apps }}" >> "$GITHUB_OUTPUT"
           if [[ ${{ github.ref }} == refs/tags/* ]]; then
             echo "VERSION=$(echo ${GITHUB_REF#refs/tags/})" >> "$GITHUB_OUTPUT"
